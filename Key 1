@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "cool-furnace-438004-h0",
+  "private_key_id": "e3135a1e233c451df78953859096f4125924cb70",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9rYhi8yLhX6v0\n7jd1spop5f+vTU/4OaWmCJEYpAsqfv5yO1PBSrCP5XXzQxrOqcEMEXqVCMeNq3ZE\nxej4nOpPqfoRZD6haoaRTLQ+YxJIfk+G5EafmnN/Aql0ETVbuwJc8TNVXAOtNysO\ny9Txv3CU7schjVJNmpymD3DjlieP8wuFAhhOpCug3RReoq0JmhP1UguYigy/XCkl\ngFGoYnfnr8segtr2bLcHhSOzZbWVTfwOe5lLsuhyBMNAeANAo968vGz/077fBrBV\nSNmkudkgPDXsa0lDJA6sF8McHZXn450bXJ1aV849gzf3yR4vPV2jnV8vrOjngCL2\nxmAHVwbHAgMBAAECggEAGm6OQku4y/NLFoIDvyZjuVGlxHC0+NWqXG12hW/cESX1\nS0cyhWMPy7L23C65E5za8VWWNs0sZx+XsZRqwgphKeIj85HRRdPUa3cRlF1gn4g1\nM4pSv8xZf+oyYaGW7/DVhCIl5yVAFelJhMb+0QQT1OKZY/bk8I+KeNGkskerElys\nkOcBLzDSNPrx5mrHHc/rP6OxGs1ZEqeCUPNNrsVTYSJ+pBQjuO4uiQHSvauWgPwa\nA8VKK5YfMUopWy1dM5hgii5Q5zwibmPU1OO/Q1gfl905aDFm/m9NYgZ+IUof06vQ\nli8GAlJ5A71FyTb8fBL2c+3ofjuPK+KtUKMecPycYQKBgQDs37rpz8U4ZVf6zluI\nNs9DnGy78aLvN12SW6QsCaB1UiKJ0Y3zK8XZ+3UHifwOHv2ma4JkoFjMzaWgQLMI\nAv3IvxLuujOB1hoiVkOhEQx+uGD89E0Guo5qXFq4m7ok+TCLZJmrwzAaQtgUCUul\nEfBcSOw0ylYtPFW8UtPYIHyLqQKBgQDM/j4Y2Zk5q9Y8J0D9c3T9ZYCLxkQzhr6r\nVPYt+KwpAu7nTeNJ6IkqUu8+6oBaxXUCPOc2Gjd6FiP5AhXQGhRgLurByKb5q6Dy\nvSsKS3LQ+msLEgPby1P13SZz7H0MkU829Ug3r9ixNR1tfZiUEck+YZ1wPup0q/Rq\nnxOT1xIE7wKBgHZjX7UKTgTgyfcleiP7WN3u6X2JyKiM4GyM9uG3sgXRFkgRf0Ph\nRdKr1hL9iQe5v4aUxyfp6Ff8FGKi05gWfqb9sMW2NJYY3xj4SnbO4ZLYLklfBLxv\nM0y/eew4kPF3xiZ1EkUBmiIV9I8XEkKfU6WcIMpFsoqLVEJ6lzy3B+h5AoGBAMJ0\nisNX5xnl/5ugQO4sD9Yv6visYxXdxBESz1RciDN/LNEN+YWqqDMV6Q1ttcRletFc\npJeV1vpg9k7Hw5lco+d5mgepJ3u/azXYbHOfjpLeeZxOwopFHqgj2M4uj5DUZqhj\nlNX+YTf4gqnScmJDXPtn7ckEZbO3Smu56wBbDCTRAoGAZQ8fjlCuUDjqPRi7RirS\nbhY02Dt77DhEaABjlWcrGhtogLRtMGrKGywaQmEVGEfkxSBCpUmbyjt7Z0vmvFOK\nji0/ruxfM6+RbaG5fVJDepeL5eEcVjCZenVZMepksyN2jrzAk0CrosLj9RI7JPaQ\nkKL+RhKYlL4wLfktVidCpR4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "kelompo1@cool-furnace-438004-h0.iam.gserviceaccount.com",
+  "client_id": "116744940792771116771",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/kelompo1%40cool-furnace-438004-h0.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
