@@ -1,14 +1,14 @@
 variables:
   SAST_IMAGE_SUFFIX: '-fips'
 
-# include:
-#   - template: Jobs/SAST.gitlab-ci.yml
+include:
+  - template: Jobs/SAST.gitlab-ci.yml
 
 
 stages:
   - build
-  # - security
-  # - test
+  - security
+  - test
   # - deploy
 
 build:
@@ -39,76 +39,55 @@ build:
     - merge_requests
 
 
-# sast:
-#   stage: security
-#   artifacts:
-#     reports:
-#       sast: gl-sast-report.json 
-#     paths:
-#       - gl-sast-report.json     
-#     expire_in: 1 week    
+sast:
+  stage: security
+  artifacts:
+    reports:
+      sast: gl-sast-report.json 
+    paths:
+      - gl-sast-report.json     
+    expire_in: 1 week    
 
-# # owasp_dependency_check:
-# #   image:
-# #     name: registry.gitlab.com/gitlab-ci-utils/docker-dependency-check:latest
-# #     entrypoint: [""]
-# #   needs:
-# #     - build
-# #   script:
-# #     - >
-# #       /usr/share/dependency-check/bin/dependency-check.sh --scan "./" --format ALL
-# #       --project "$CI_PROJECT_NAME" --failOnCVSS 0
-# #   allow_failure: true
-# #   only:
-# #     - main
-# #     - development
-# #     - staging
-# #   artifacts:
-# #     when: always
-# #     paths:
-# #       - "./dependency-check-report.html"
+unit-tests:
+  stage: test
+  image: golang:1.21
+  script:
+    - echo "Testing with Go ${GO_VERSION} on ${OS} with ${DATABASE}"
+    - go mod download
+    - go test ./tests/unit/... -v
+  allow_failure: true
+  only:
+    - main
+    - merge_requests
+    - development
 
+integration-tests:
+  stage: test
+  image: golang:1.21
+  before_script:
+    - go mod download
+  script:
+    - go test ./tests/integration/... -v
+  only:
+    - merge_requests
+    - main
+    - development
 
-# unit-tests:
-#   stage: test
-#   image: golang:1.21
-#   script:
-#     - echo "Testing with Go ${GO_VERSION} on ${OS} with ${DATABASE}"
-#     - go mod download
-#     - go test ./tests/unit/... -v
-#   allow_failure: true
-#   only:
-#     - main
-#     - merge_requests
-#     - development
-
-# integration-tests:
-#   stage: test
-#   image: golang:1.21
-#   before_script:
-#     - go mod download
-#   script:
-#     - go test ./tests/integration/... -v
-#   only:
-#     - merge_requests
-#     - main
-#     - development
-
-# e2e-tests:
-#   stage: test
-#   needs:
-#     - build
-#   image: golang:1.21
-#   services:
-#     - name: $DOCKER_IMAGE:$CI_COMMIT_SHORT_SHA
-#       alias: app
-#   before_script:
-#     - go mod download
-#   script:
-#     - go test ./tests/e2e/... -v
-#   only:
-#     - development
-#     - main
+e2e-tests:
+  stage: test
+  needs:
+    - build
+  image: golang:1.21
+  services:
+    - name: $DOCKER_IMAGE:$CI_COMMIT_SHORT_SHA
+      alias: app
+  before_script:
+    - go mod download
+  script:
+    - go test ./tests/e2e/... -v
+  only:
+    - development
+    - main
 
 # deploy-dev:
 #   stage: deploy
